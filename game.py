@@ -14,7 +14,7 @@ guessed_letters = []
 
 print("----------¡Bienvenido al juego de adivinanzas!----------")
 print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es")
-print ("Elegí  el nivel de dificultad.   1.Fácil   2.Media ")
+print ("Elegí  el nivel de dificultad.   1.Fácil   2.Media   3.Difícil")
 dificultad = (input ())
 
 if (dificultad == "1"):  #  si la dificultad es 1, agrego las vocales a las letras adivinadas
