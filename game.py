@@ -14,8 +14,21 @@ guessed_letters = []
 
 print("----------¡Bienvenido al juego de adivinanzas!----------")
 print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es")
+print ("Elegí  el nivel de dificultad.   1.Fácil")
+dificultad = (input ())
 
-word_displayed = "_" * len(secret_word)
+if (dificultad == "1"):  #  si la dificultad es 1, agrego las vocales a las letras adivinadas
+    guessed_letters.extend (['a','e','i','o','u', 'ó'])
+    word_displayed = ""  #var que va a mostrar la palabra parcialmente adivinada 
+    for letter in secret_word: #compara con cada letra de la palabra a adivinar 
+        if letter in guessed_letters:  # si la letra esta en la palabra a adivinar 
+            word_displayed += letter   # agrega la letra (las vocales estan) a la palabra q se va a mostrar 
+        else:
+            word_displayed += "_"      # si no esta, agrega un guion 
+else:
+    word_displayed = "_" * len(secret_word) 
+
+
 # Mostrarla palabra parcialmente adivinada
 print(f"Palabra: {word_displayed}")
 
